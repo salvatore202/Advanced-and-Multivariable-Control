@@ -1,0 +1,81 @@
+M=0.5;
+m=0.2;
+b=0.1;
+I=0.006;
+g=9.8;
+l=0.3;
+
+E=[b M+m 0 -m*l;
+   0 -m*l 0 (I+m*l^2)];
+Atilde=[-b  0;
+         0   -m*g*l];
+Btilde=[1;0];
+
+
+A1=inv(E)*Atilde;
+B1=inv(E)*Btilde;
+% x1=x;x2=xdot;x3=phi;x4=phidot;
+
+P=I*(M+m)+M*m*l^2;
+A = [0      1              0           0;
+     0 -(I+m*l^2)*b/P  (m^2*g*l^2)/P   0;
+     0      0              0           1;
+     0 -(m*l*b)/P       m*g*l*(M+m)/P  0];
+B = [     0; 
+     (I+m*l^2)/P;
+          0;
+        m*l/P];
+C = [1 0 0 0;
+     0 0 1 0];
+D = [0;
+     0];
+
+
+ 
+
+%% Assegnamento degli autovalori con azione integrale
+
+
+% Testa controllabilità e osservabilità dell'impianto
+%
+
+rank(ctrb(A,B))
+
+rank(obsv(A,C))
+
+ 
+sysItg=ss(0,1,1,0); %Integratore
+
+
+ Ag=[A zeros(4,1);-C(1,:) sysItg.A];
+ Bg=[B;0];
+ Cg=[C zeros(2,1)];
+ Dg=D;
+ 
+%
+% Testa controllabilità e osservabilità dell'impianto aumentato
+%
+
+rank(ctrb(Ag,Bg))
+
+rank(obsv(Ag,Cg))
+
+% State feedback design
+
+K=place(Ag,Bg,[-4 -3 -2.5 -2 -1]);
+%[K,S,E]=lqr(Ag,Bg,daug(eye(6)/5000,100*eye(2)),0.5*eye(2))
+Kf=K(:,1:4);
+Ki=K(:,end);
+
+% Observer design
+L=place(A',C',[-20 -18 -16 -15])';
+Aobs=A-L*C;
+Bobs=[L B-L*D];
+Cobs=eye(4);
+Dobs=zeros(4,3);
+
+
+
+
+
+ 

@@ -1,0 +1,131 @@
+%% ESERCIZIO LQ TEMPO FINITO E  TEMPO INFINITO 
+ 
+
+clear; close all; clc;
+
+%% DATI INIZIALI
+% Parametri sistema
+A = [0 1; -2 -0.5];
+B = [0; 1];
+x0 = [1; 0];          % condizione iniziale
+
+% Funzione di costo
+
+Q = diag([10, 1]);
+R = 1;
+T = 5;               % orizzonte finito
+
+%% Verifica Raggiungibilità 
+Co = [B, A*B];
+rankCo = rank(Co);
+fprintf('Rank matrice di controllabilita: %d (target 2)\n', rankCo);
+
+%% --- 1) Risolvere la RDE all'indietro: -Pdot = ... , P(T)=0
+% Converti P (2x2 symmetric) in un vettore di dimensione 4 
+vecP0 = zeros(4,1);   % P(T) = 0
+tspan = [T 0];        % integrazione all'indietro
+
+
+% Use ODE45 to integrate from T to 0
+opts=odeset('RelTol',1e-6,'AbsTol',1e-9);
+ricfun = @(t, v) riccati_ode(t, v, A, B, Q, R);
+[t_sol, vecP_sol] = ode45(ricfun, tspan, vecP0, opts);
+
+% reorder solution to increasing time 0->T
+t_R = flipud(t_sol);
+vecP_R = flipud(vecP_sol);
+
+% reconstruct P(t) and K(t) on a grid
+Nt = length(t_R);
+P_t = zeros(2,2,Nt);
+K_t = zeros(1,2,Nt);
+for i=1:Nt
+    P = reshape(vecP_R(i,:)',2,2);
+    P_t(:,:,i)=P;
+    K_t(:,:,i) = (R\ (B')) * P;  % K = R^{-1} B' P  -> 1x2
+end
+
+% Interp function for K(t) during simulation (MATLAB will simulate forward 0->T)
+K_of_t = @(tt) interp1(t_R, squeeze(K_t(:,:,1:length(t_R)))', tt, 'linear', 'extrap')';
+
+%% --- 2) Simulare sistema in retroazione tempo-variabile (usiamo l'approssimazione K(t) interpolata)
+
+
+TTspan=[0:0.01:T];
+
+clfun = @(tt, xx) closed_loop_ode(tt, xx, A, B, K_of_t);
+[tsim, xsim] = ode45(clfun, [0 T], x0, opts);
+
+
+% compute control u(t) and instantaneous cost
+u_sim = zeros(length(tsim),1);
+instCost = zeros(length(tsim),1);
+for i=1:length(tsim)
+    Kcur = K_of_t(tsim(i))'; % 1x2
+    u_sim(i) = -Kcur * xsim(i,:)';
+    instCost(i) = xsim(i,:)*Q*xsim(i,:)' + u_sim(i)^2 * R;
+end
+
+% numerical integral for cost J_T
+J_T = trapz(tsim, instCost);
+
+fprintf('Costo numerico J_T (orizzonte finito) = %.6f\n', J_T);
+
+%% --- 3) Soluzione orizzonte infinito (ARE)
+[P_inf,~,K_inf] = care(A,B,Q,R);   % P_inf solves ARE, K_inf = R^{-1} B' P_inf
+K_inf = (R\ (B')) * P_inf;        % ensure sign/shape
+fprintf('K_inf = [%f, %f]\n', K_inf(1), K_inf(2));
+
+% An alternative matlab function
+sys_ss=ss(A,B,eye(length(A)),zeros(size(B,1),size(B,2)));
+[K_inf2,P_inf2,Poles] = lqr(sys_ss,Q,R);
+
+
+
+% Simula closed-loop tempo-invariante u = -K_inf x
+% In this case the system and the control are time invariant, hence even a
+% simulink code can be adopted
+Acl_inf = A - B*K_inf;
+[tsim2, xsim2] = ode45(@(t,x) Acl_inf*x, [0 T], x0, opts);
+u_sim2 = - (K_inf * xsim2')';
+
+% costo infinito (approssimato su [0,T])
+instCost2 = zeros(length(tsim2),1);
+for i=1:length(tsim2)
+    instCost2(i) = xsim2(i,:)*Q*xsim2(i,:)' + u_sim2(i)^2 * R;
+end
+J_inf_approx = trapz(tsim2, instCost2);
+fprintf('Costo approssimato J_inf su [0,T] = %.6f\n', J_inf_approx);
+
+%% --- 4) Plots
+figure;
+subplot(3,1,1);
+plot(tsim, xsim(:,1), 'LineWidth', 1.2); hold on;
+plot(tsim2, xsim2(:,1), '--','LineWidth', 1.0);
+ylabel('x_1'); legend('x1 (K(t))','x1 (Kinf)');
+grid on;
+
+subplot(3,1,2);
+plot(tsim, xsim(:,2), 'LineWidth', 1.2); hold on;
+plot(tsim2, xsim2(:,2), '--','LineWidth', 1.0);
+ylabel('x_2'); legend('x2 (K(t))','x2 (Kinf)');
+grid on;
+
+subplot(3,1,3);
+plot(tsim, u_sim, 'LineWidth', 1.2); hold on;
+plot(tsim2, u_sim2, '--','LineWidth', 1.0);
+xlabel('Time (s)'); ylabel('u(t)'); legend('u (K(t))','u (Kinf)');
+grid on;
+
+figure;
+% plot elementi di P(t)
+plot(t_R, squeeze(P_t(1,1,:)), 'LineWidth', 1.2); hold on;
+plot(t_R, squeeze(P_t(1,2,:)), 'LineWidth', 1.0);
+plot(t_R, squeeze(P_t(2,2,:)), 'LineWidth', 1.0);
+yline(P_inf(1,1), '--'); yline(P_inf(1,2), '--'); yline(P_inf(2,2), '--');
+xlabel('t'); ylabel('P elements'); legend('P11','P12','P22','P11_inf','P12_inf','P22_inf');
+grid on;
+
+fprintf('P_inf =\n'); disp(P_inf);
+
+%% End of script

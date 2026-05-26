@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:body><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="center"/></w:pPr><w:r><w:t>ESERCITAZIONE</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="center"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Consideriamo il sistema meccanico </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="center"/></w:pPr><w:customXml w:element="image"><w:customXmlPr><w:attr w:name="height" w:val="441"/><w:attr w:name="width" w:val="373"/><w:attr w:name="verticalAlign" w:val="baseline"/><w:attr w:name="altText" w:val=""/><w:attr w:name="relationshipId" w:val="rId1"/></w:customXmlPr></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="center"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Nell'ipotesi in cui la massa m1 rotoli senza scivolare, il sistema presenterà 3 gradi di libertà. Scegliendo come origine del nostro riferimento quello delle molle elongate sotto l'azione della forza peso, il modello matematico del sistema risulterà:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="center"/></w:pPr><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/></w:customXmlPr><w:r><w:t>\dot x(t) =A x(t)+Bu(t) 
+</w:t></w:r></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="center"/></w:pPr><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/></w:customXmlPr><w:r><w:t>y(t)=x(t)
+</w:t></w:r></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>con </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId2"/></w:customXmlPr><w:r><w:t>\begin{array}{l}
+{\;x}_1 =s_{1\;} \\
+x_2 ={\dot{\;s\;} }_1 
+\end{array}</w:t></w:r></w:customXml><w:r><w:t>         </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId3"/></w:customXmlPr><w:r><w:t>\begin{array}{l}
+{\;x}_3 =s_{3\;} \\
+x_4 ={\dot{\;s\;} }_3 
+\end{array}</w:t></w:r></w:customXml><w:r><w:t>         </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId4"/></w:customXmlPr><w:r><w:t>\begin{array}{l}
+{\;x}_5 ={s_{\;} }_4 \\
+x_6 ={\dot{\;s\;} }_4 
+\end{array}</w:t></w:r></w:customXml><w:r><w:t> </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>e </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId5"/></w:customXmlPr><w:r><w:t>A=\left\lbrack \begin{array}{cccccc}
+0 &amp; 1 &amp; 0 &amp; 0 &amp; 0 &amp; 0\\
+-\frac{1}{J_1 }k_1  &amp; -\frac{1}{J_1 }b_1  &amp; -\frac{2}{J_1 }k_1  &amp; 0 &amp; 0 &amp; 0\\
+0 &amp; 0 &amp; 0 &amp; 1 &amp; 0 &amp; 0\\
+-2\frac{k_1 }{J_2 } &amp; 0 &amp; -\frac{\left(4k_{1\;} +k_2 \right)}{J_2 } &amp; -\frac{b_2 }{J_2 } &amp; -\frac{k_2 }{J_2 } &amp; -\frac{b_2 }{J_2 }\\
+0 &amp; 0 &amp; 0 &amp; 0 &amp; 0 &amp; 1\\
+0 &amp; 0 &amp; \frac{k_2 }{m_4 } &amp; \frac{b_2 }{m_4 } &amp; -\frac{k_2 }{m_4 } &amp; -\frac{b_2 }{m_4 }
+\end{array}\right\rbrack</w:t></w:r></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="true"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId6"/></w:customXmlPr><w:r><w:t>B=\left\lbrack \begin{array}{cc}
+0 &amp; 0\\
+\frac{\cos \left(\alpha \right)}{J_1 } &amp; 0\\
+0 &amp; 0\\
+0 &amp; 0\\
+0 &amp; 0\\
+0 &amp; \frac{1}{m_4 }
+\end{array}\right\rbrack</w:t></w:r></w:customXml></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>con </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId7"/></w:customXmlPr><w:r><w:t>J_1 =\frac{3}{2}m_{1\;}</w:t></w:r></w:customXml><w:r><w:t> e  </w:t></w:r><w:customXml w:element="equation"><w:customXmlPr><w:attr w:name="displayStyle" w:val="false"/><w:attr w:name="encoding" w:val="mathml"/><w:attr w:name="relationshipId" w:val="rId8"/></w:customXmlPr><w:r><w:t>J_{2\;} =\left(1+\frac{R_3 }{2R_2 }\right)m_3 +2m_2</w:t></w:r></w:customXml><w:r><w:t>.</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Considerando i seguenti valori per le costanti del sistema:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>k1=1;  k2=0.5;   k3=1.2;    b1=0.4;   b2=0.4;    b3=0.6;    m1=0.6;   m2=1.5;     m3=0.75;    m4=0.1;   R2=R3=0.1; alpha=30;</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>progettare le seguente strategie di controllo e verificarle in ambiente simulink:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>1) Retroazione di stato con assegnamento degli autovalori e compensazione del guadagno al fine di controllore la posizione delle masse s1 ed s4 in modo da avere tempo di assestamento di 10s e assenza di sovraelongazione </w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>2) Retroazione di stato con assegnamento degli autovalori con azione integrale al fine di controllore la posizione delle masse  s1 ed s4 in modo da avere tempo di assestamento di 10s e assenza di sovraelongazione</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>3) Controllo LQ con compensazione del guadagno al fine di controllore la posizione delle masse s1 ed s4</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>4) Controllo  LQ con azione integrale sul sistema aumentato al fine di controllore la posizione delle masse  s1 ed s4</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>5) Controllo LQG con filtro di Kalman al fine di controllore la posizione delle masse  s1 ed s4</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>6) Controllo H-infinito al fine di controllore la posizione delle masse  s1 ed s4</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="center"/></w:pPr><w:r><w:t>SOLUZIONE</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="center"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[clear all
+close all
+clc
+]]></w:t></w:r></w:p><w:p><w:pPr><w:sectPr/></w:pPr></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:t>MODELLO DEL SISTEMA</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[
+
+% VARIABILI DEL SISTEMA
+
+k1=1;  
+k2=0.5;   
+k3=1.2;    
+b1=0.4;   
+b2=0.4;    
+b3=0.6;    
+m1=0.6;   
+m2=1.5;     
+m3=0.75;    
+m4=0.1;   
+R2=0.1;
+R3=0.1;
+alpha=30*pi/180;
+
+% MATRICI DINAMICHE
+
+J1=3/2*m1;
+J2=(1+R3/(2*R2))*m3+2*m2;
+
+A=[    0        1         0            0       0           0;
+    -k1/J1    -b1/J1   -2*k1/J1        0       0           0;
+       0        0         0            1       0           0;
+    -2*k1/J2    0     -(4*k1+k2)/J2  -b2/J2  -k2/J2    -b2/J2;
+       0        0         0            0       0           1;
+       0        0       k2/m4        b2/m4    -k2/m4     -b2/m4];
+
+
+  
+B=zeros(6,1);
+
+B(2,1)=cos(alpha)/J1;
+B(6,2)=1/m4;
+
+C=eye(6);
+
+%C=[1 0 0 0 0 0; 
+%   0 0 0 0 1 0];
+D=zeros(6,2);
+sys=ss(A,B,C,D);]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:t>3) Controllo LQ con compensazione del guadagno</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[% Scelta delle matrici di peso
+
+Qtilde=1;
+Q=C'*Qtilde*C;
+R=eye(2);
+
+% problema LQ
+
+[K,P,Poles] = lqr(sys,Q,R)
+
+% compensatore di regime
+
+C_add=C([1 5],:);
+Gain=dcgain(ss((A-B*K),B,C_add,zeros(2,2)));
+Comp=pinv(Gain)
+
+]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:t>4) Controllo LQ con azione integrale</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[
+%Aggiunta dell'azione integrale (integrazione dell'errore)
+% Aggiungiamo stato integrale xI = ∫(r - y) dt
+
+n_aug=2;
+
+A_aug = [A zeros(size(A,1),2); -C_add zeros(n_aug,n_aug)];
+B_aug = [B; zeros(n_aug,size(B,2))];
+C_aug = [C zeros(size(A,1),2)];
+D_aug = D;
+sys_aug=ss(A_aug,B_aug,C_aug,D_aug);
+
+rank(ctrb(A_aug,B_aug))]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[
+
+% Scelta delle matrici di peso
+
+Qtilde=1;
+Q=C_aug'*Qtilde*C_aug+blkdiag(zeros(6),eye(2));
+R=eye(2);
+
+% problema LQ
+
+[Kint,P,Poles] = lqr(sys_aug,Q,R)
+Kint1=Kint(:,1:size(C,1));
+Kint2=Kint(:,size(C,1)+1:end);
+]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="heading"/><w:jc w:val="left"/></w:pPr><w:r><w:rPr><w:b/></w:rPr><w:t>4) Controllo LQG con azione integrale</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t>Consideriamo un filtro di Kalman nell'ipotesi di rumore gaussiano a media nulla sullo stato e sull'uscita con matrici di covarianza:</w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="code"/></w:pPr><w:r><w:t><![CDATA[Qt=1e-3*eye(6);
+Rt=1e-3*eye(6);
+
+[P,~,~] = care(A', C', Qt, Rt);
+K = P*C'/Rt;
+
+
+%% Dinamica dello stimatore di Kalman
+% x_hat_dot = (A - K C) x_hat + B u + K y
+
+A_kf = A - K*C;
+B_kf = [B K];   
+C_kf = C;  
+D_kf = zeros(size(C_kf,1),size(B_kf,2));
+
+KF = ss(A_kf, B_kf, C_kf, D_kf);
+]]></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p><w:p><w:pPr><w:pStyle w:val="text"/><w:jc w:val="left"/></w:pPr><w:r><w:t></w:t></w:r></w:p></w:body></w:document>

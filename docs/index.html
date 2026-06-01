@@ -1,20 +1,96 @@
 <!DOCTYPE html>
-<html>
+<html lang="it">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <title>Advanced Control - Simulink Reports</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      background: #0f172a;
+      color: #e2e8f0;
+    }
+
+    header {
+      background: linear-gradient(135deg, #1e3a8a, #0f172a);
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    header p {
+      margin-top: 10px;
+      color: #94a3b8;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      display: block;
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 12px;
+      padding: 25px;
+      text-decoration: none;
+      color: inherit;
+      transition: 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      background: #273449;
+    }
+
+    .card h2 {
+      margin: 0;
+      color: #60a5fa;
+    }
+
+    .card p {
+      margin-top: 8px;
+      color: #cbd5e1;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #64748b;
+      font-size: 0.8rem;
+    }
+  </style>
 </head>
 
 <body>
+
+<header>
   <h1>Advanced and Multivariable Control</h1>
+  <p>Simulink Web Views</p>
+</header>
 
-  <p>Simulink Web Views dei modelli:</p>
+<div class="container">
 
-  <ul>
-    <li><a href="Verifica_LQR/">Verifica LQR</a></li>
-    <li><a href="Esame_20042026/">Esame 20/04/2026</a></li>
-    <li><a href="Esame_11052026/">Esame 04/03/2026</a></li>
-  </ul>
+  <a class="card" href="Esame_20042026/Verifica_LQR/">
+    <h2>Verifica LQR</h2>
+    <p>Report Simulink del sistema di controllo LQR.</p>
+  </a>
+
+</div>
+
+<footer>
+  MATLAB Simulink Report Generator
+</footer>
 
 </body>
 </html>

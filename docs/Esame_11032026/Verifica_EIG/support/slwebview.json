@@ -1,0 +1,27 @@
+{
+ "version":3,
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "sections":[
+  {
+   "hid":1,
+   "sid":"Verifica_EIG",
+   "name":"Verifica_EIG",
+   "fullname":"Verifica_EIG",
+   "label":"Verifica_EIG",
+   "parent":0,
+   "descendantIDs":[
+   ],
+   "descendantsURL":"support/slwebview_files/Verifica_EIG_diagrams_1.json",
+   "sysViewURL":"support/slwebview_files/Verifica_EIG_p.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false,
+  "notes":false
+ },
+ "iconsUrl":"support/slwebview_files/icon.css",
+ "lod":true
+}

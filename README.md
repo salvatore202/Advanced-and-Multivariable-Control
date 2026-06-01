@@ -18,7 +18,7 @@ Raccolta delle prove d'esame svolte e del materiale fornito dal docente del cors
 
 La repository è organizzata in 4 directory principali. Indicazioni su struttura e contenuto delle directory di seguito
 ```text
-├── .github/                     # Configurazioni per GitHub Pages (se attivo)
+├── .github/                     # Configurazioni per GitHub Pages
 │
 ├── Esame/                       # Directory usata per creare il file di consegna 
 │
@@ -50,12 +50,15 @@ La repository è organizzata in 4 directory principali. Indicazioni su struttura
 
 ## 🌐 Come Consultare i Report Interattivi (GitHub Pages)
 
-Per ogni prova d'esame è stata generata una **Simulink Web View** per ogni file di Verifica Simulink in modo da consultare lo schema simulink direttamente da questa pagina web. Grazie a GitHub Pages, puoi esplorare gli schemi a blocchi Simulink e i risultati direttamente dal tuo browser, **senza bisogno di avere MATLAB installato**.
+Per ogni prova d'esame è stata generata una **Simulink Web View** per ogni file di Verifica Simulink in modo da consultare lo schema simulink direttamente da questa pagina web. Grazie a GitHub Pages, puoi esplorare gli schemi a blocchi Simulink e i risultati direttamente dal tuo browser seguendo il link di seguito, **senza bisogno di avere MATLAB installato**. 
+
+https://salvatore202.github.io/Advanced-and-Multivariable-Control/
 
 
-### 📺 Video Tutorial Rapido
 
-<img src="docs/tutorial.gif" alt="Come navigare nei modelli Simulink via Web" width="100%" />
+### Video dimostrativo
+
+<img src="docs/tutorial_1.gif" alt="Come navigare nei modelli Simulink via Web" width="100%" />
 
 ### 📌 Guida Passo-Passo per l'utilizzzo della repository
 
@@ -69,12 +72,14 @@ Per ogni prova d'esame è stata generata una **Simulink Web View** per ogni file
 Se desideri scaricare il materiale per eseguire gli script `.m`, i live scripts `.mlx` o modificare i modelli `.slx` in locale su MATLAB:
 
 1. Apri il terminale e clona la repository:
+
    ```bash
    git clone https://github.com/salvatore202/Advanced-And-Multivariable-Control.git
    cd Advanced-And-Multivariable-Control
 2. Avvia Matlab
 3. **Installa dipendenze**:  cvx -> https://cvxr.com/cvx/download/
 4. Nel caso in cui sia necessario usare cvx per eseguire lo script, scrivere nella Command Window di Matlab:
+
     ```bash
     cd ~/*percorso-cvx*/
     cvx_setup

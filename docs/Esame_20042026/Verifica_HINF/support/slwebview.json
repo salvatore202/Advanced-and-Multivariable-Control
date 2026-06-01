@@ -1,0 +1,27 @@
+{
+ "version":3,
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "sections":[
+  {
+   "hid":1,
+   "sid":"Verifica_HINF",
+   "name":"Verifica_HINF",
+   "fullname":"Verifica_HINF",
+   "label":"Verifica_HINF",
+   "parent":0,
+   "descendantIDs":[
+   ],
+   "descendantsURL":"support/slwebview_files/Verifica_HINF_diagrams_1.json",
+   "sysViewURL":"support/slwebview_files/Verifica_HINF_p.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false,
+  "notes":false
+ },
+ "iconsUrl":"support/slwebview_files/icon.css",
+ "lod":true
+}

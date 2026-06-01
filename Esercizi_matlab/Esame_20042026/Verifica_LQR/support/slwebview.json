@@ -1,0 +1,27 @@
+{
+ "version":3,
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "sections":[
+  {
+   "hid":1,
+   "sid":"Verifica_LQR",
+   "name":"Verifica_LQR",
+   "fullname":"Verifica_LQR",
+   "label":"Verifica_LQR",
+   "parent":0,
+   "descendantIDs":[
+   ],
+   "descendantsURL":"support/slwebview_files/Verifica_LQR_diagrams_1.json",
+   "sysViewURL":"support/slwebview_files/Verifica_LQR_p.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false,
+  "notes":false
+ },
+ "iconsUrl":"support/slwebview_files/icon.css",
+ "lod":true
+}

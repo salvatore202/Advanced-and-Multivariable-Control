@@ -12,7 +12,7 @@ Raccolta delle prove d'esame svolte e del materiale fornito dal docente del cors
 5. file Traccia_*codice* `.pdf`
 6. **Opzionalmente:** file immagini `.png` raffiguranti immagini per la compressione SVD o schemi di controllo della traccia
 
----
+
 
 ## Struttura della Repository
 
@@ -46,7 +46,7 @@ La repository è organizzata in 4 directory principali. Indicazioni su struttura
 └── README.md                   # Questo file
 ```
 
----
+
 
 ## 🌐 Come Consultare i Report Interattivi (GitHub Pages)
 
@@ -60,7 +60,7 @@ https://salvatore202.github.io/Advanced-and-Multivariable-Control/
 
 <img src="docs/tutorial_1.gif" alt="Come navigare nei modelli Simulink via Web" width="100%" />
 
-### 📌 Guida Passo-Passo per l'utilizzzo della repository
+## 📌 Guida Passo-Passo per l'utilizzzo della repository
 
 #### Opzione 1: Visualizzazione Online (Consigliato)
 1. Spostarsi in Esame_*codice*/

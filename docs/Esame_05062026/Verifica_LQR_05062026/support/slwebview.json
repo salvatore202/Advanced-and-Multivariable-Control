@@ -1,0 +1,27 @@
+{
+ "version":3,
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "sections":[
+  {
+   "hid":1,
+   "sid":"Verifica_LQR_05062026",
+   "name":"Verifica_LQR_05062026",
+   "fullname":"Verifica_LQR_05062026",
+   "label":"Verifica_LQR_05062026",
+   "parent":0,
+   "descendantIDs":[
+   ],
+   "descendantsURL":"support/slwebview_files/Verifica_LQR_05062026_diagrams_1.json",
+   "sysViewURL":"support/slwebview_files/Verifica_LQR_05062026_p.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false,
+  "notes":false
+ },
+ "iconsUrl":"support/slwebview_files/icon.css",
+ "lod":true
+}

@@ -9,12 +9,12 @@ s = tf('s');
 %% -----------------------------
 % Tracking specs
 e_ss_max = 0.02;     % max steady-state error (1%)
-Ts_des   = 0.3;      % desired settling time
-PO_max   = 50;       % max overshoot (%)
+Ts_des = 0.3;      % desired settling time
+PO_max = 50;       % max overshoot (%)
 
 % Noise rejection specs
 noise_atten_dB = 100; % desired attenuation in HF (dB)
-omega_noise    = 30; % frequency from which to attenuate
+omega_noise = 30; % frequency from which to attenuate
 
 % Control effort penalization
 Wu_gain = 0.01;

@@ -4,7 +4,7 @@
 [![Platform-Web](https://img.shields.io/badge/Platform-Web%20%2F%20HTML5-blue.svg)]()
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 
-Raccolta delle prove d'esame svolte e del materiale fornito dal docente del corso di **Complementi di Controlli- Controllo Avanzato e Applicazioni (6 CFU)**. Ogni directory del tipo Esame_*codice* include:
+Raccolta delle prove d'esame svolte e del materiale fornito dal docente (prof.[Roberto Ambrosino](https://www.researchgate.net/profile/Roberto-Ambrosino)) del corso di **Complementi di Controlli- Controllo Avanzato e Applicazioni (6 CFU)**. Ogni directory del tipo Esame_*codice* include:
 1. file script Main_*codice*  `.m` con il codice matlab
 2. file live script Main_*codice*  `.mlx`
 3. file Main_*codice*  `.ipynb` con il live script consultabile direttamente su questa pagna web

@@ -1,0 +1,27 @@
+{
+ "version":3,
+ "baseUrl":"support/slwebview_files",
+ "homeHid":1,
+ "sections":[
+  {
+   "hid":1,
+   "sid":"LQG_DE6000008",
+   "name":"LQG_DE6000008",
+   "fullname":"LQG_DE6000008",
+   "label":"LQG_DE6000008",
+   "parent":0,
+   "descendantIDs":[
+   ],
+   "descendantsURL":"support/slwebview_files/LQG_DE6000008_diagrams_1.json",
+   "sysViewURL":"support/slwebview_files/LQG_DE6000008_p.json"
+  }
+ ],
+ "optViews":[
+ ],
+ "display":{
+  "informer":false,
+  "notes":false
+ },
+ "iconsUrl":"support/slwebview_files/icon.css",
+ "lod":true
+}

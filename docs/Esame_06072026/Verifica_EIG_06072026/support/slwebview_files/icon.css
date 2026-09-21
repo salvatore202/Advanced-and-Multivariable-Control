@@ -1,0 +1,13 @@
+.SimulinkModelIcon_icon,
+.BlockIcon_icon,
+.eml_icon,
+.LineIcon_icon {
+    background:url('icon.png') no-repeat top left;
+    width:16px; 
+    height:16px; 
+}
+
+.SimulinkModelIcon_icon { background-position: -0px; }
+.BlockIcon_icon { background-position: -16px; }
+.eml_icon { background-position: -32px; }
+.LineIcon_icon { background-position: -48px; }
